@@ -1,0 +1,22 @@
+{
+  "name": "astro",
+  "version": "0.0.1",
+  "dependencies": {
+    "marionette": "~2.4.0"
+  },
+  "authors": [
+    "rip <lazitskiy@gmail.com>"
+  ],
+  "description": "astro",
+  "keywords": [
+    "f"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
