@@ -19,7 +19,7 @@
 
 
         notify: function () {
-            console.log('cas changed');
+            console.log('name changed');
         }
 
 

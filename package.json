@@ -15,7 +15,6 @@
     "toolbar": true
   },
   "chromium-args": "--child-clean-exit",
-
   "author": {
     "name": "",
     "email": "",
@@ -26,7 +25,8 @@
     "url": "git://github.com/rip/astro.git"
   },
   "dependencies": {
-    "nedb": "^1.1.1"
+    "nedb": "^1.1.1",
+    "q": "^1.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
