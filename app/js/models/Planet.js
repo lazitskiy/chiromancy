@@ -8,12 +8,16 @@
 
         idAttribute: 'planet_id',
         defaults: {
-            'name': 'Salat'
+            name: 'Salat',
+            created: 0
         },
 
 
-
         initialize: function () {
+            if (this.isNew()) {
+                this.set('created', Date.now());
+            }
+
             this.on('change:name', this.notify, this);
         },
 
@@ -26,5 +30,4 @@
     });
 
     App.Model.Planet = Planet;
-})
-(App)
+})(App);

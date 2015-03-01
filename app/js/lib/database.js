@@ -11,7 +11,6 @@ var
     db = {},
 // Load native UI library
     dataPath = require('nw.gui').App.dataPath
-
     ;
 
 
@@ -20,4 +19,3 @@ db.planet = new Datastore({
     autoload: true
 });
 
-(new Q).den
