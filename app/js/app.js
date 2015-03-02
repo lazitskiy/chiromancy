@@ -5,7 +5,7 @@
 var App = new Backbone.Marionette.Application();
 
 _.extend(App, {
-    Controlelr: {},
+    Controller: {},
     Model: {},
     Collection: {},
     View: {}

@@ -27,6 +27,33 @@
         return Q.all(ts);
     };
 
+    /**
+     * Напихаем планеты
+     */
+    var initDb = function () {
+        var Planet = App.Collection.Planet;
+
+        Planet.find()
+            .then(function (data) {
+                if (data.length != 10) {
+                    Planet.truncate().then(function () {
+                        Planet.insert([
+                            {name: 'Солнце'},
+                            {name: 'Меркурий'},
+                            {name: 'Венера'},
+                            {name: 'Земля'},
+                            {name: 'Марс'},
+                            {name: 'Юпитер'},
+                            {name: 'Сатурн'},
+                            {name: 'Уран'},
+                            {name: 'Нептун'},
+                            {name: 'Плутон'}
+                        ])
+                    })
+                }
+            });
+    };
+
 
     var initApp = function () {
         App.start();
@@ -34,6 +61,7 @@
 
 
     initTemplates()
+        .then(initDb)
         .then(initApp);
 
 

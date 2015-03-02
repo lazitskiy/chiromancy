@@ -4,7 +4,7 @@
 (function (App) {
     'use strict';
 
-    var Planet = Backbone.Model.extend({
+    var Planet = _.extend(App.Model.Base, {
 
         idAttribute: 'planet_id',
         defaults: {

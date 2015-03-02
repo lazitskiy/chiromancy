@@ -7,15 +7,12 @@ var
     path = require('path'),
     Datastore = require('nedb'),
     Q = require('q'),
+    fs = require('fs'),
 
     db = {},
 // Load native UI library
-    dataPath = require('nw.gui').App.dataPath
-    ;
+    dataPath = require('nw.gui').App.dataPath;
 
 
-db.planet = new Datastore({
-    filename: path.join(dataPath, 'data/planet.db'),
-    autoload: true
-});
+App.dataPath = dataPath + '/data';
 

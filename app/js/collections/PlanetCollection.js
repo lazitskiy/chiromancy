@@ -5,12 +5,15 @@
 (function (App) {
     'use strict';
 
-    var Planets = Backbone.Collection.Extends({
+    var Planet = App.Collection.Base.extend({
 
         model: App.Model.Planet
+
+    }, {
+        modelName: 'planet'
 
     });
 
 
-    App.Collection.Planets = Planets;
+    App.Collection.Planet = Planet;
 })(App);
