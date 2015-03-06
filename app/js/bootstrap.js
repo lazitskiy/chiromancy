@@ -5,13 +5,6 @@
 (function (App) {
     'use strict';
 
-    window.log = function () {
-        return console.log.apply(console, arguments);
-    };
-
-    window.debug = function () {
-        return console.debug.apply(console, arguments);
-    };
 
     // load templates into index.html
     var initTemplates = function () {
@@ -57,12 +50,19 @@
 
     var initApp = function () {
         App.start();
+        var main_layout = new App.View.Layout();
+        App.layout.show(main_layout);
     }
 
 
     initTemplates()
         .then(initDb)
-        .then(initApp);
+        .then(initApp)
+        .fail(function (err) {
+            error(err);
+            console.error(err);
+        });
+    ;
 
-
+  //  App.start();
 })(App);

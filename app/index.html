@@ -6,27 +6,12 @@
 </head>
 <body>
 
-<header id="headerfff">
 
-</header>
+<div class="main-window-region"></div>
+<script id="index_index" src="templates/index/index.html" type="text/x-template"></script>
+<script id="loading" src="templates/loading.html" type="text/x-template"></script>
 
-<nav id="menu">
-    <script id="nav" src="js/templates/nav.tpl" type="text/x-template"></script>
-</nav>
-
-
-<div id="index">
-    <script id="index_index" src="js/templates/index/index.tpl" type="text/x-template"></script>
-</div>
-
-<div id="planet">
-    <script id="planet_index" src="js/templates/planet/index.tpl" type="text/x-template"></script>
-</div>
-
-
-<footer id="footer">
-
-</footer>
+<script id="planet_index" src="templates/planet/index.tpl" type="text/x-template"></script>
 
 
 <!-- 3rd party Dependencies -->
@@ -40,6 +25,7 @@
 <!-- App Initialization -->
 <script src="js/app.js"></script>
 <script src="js/lib/database.js"></script>
+<script src="js/lib/language.js"></script>
 
 <!-- Models -->
 <script src="js/models/BaseModel.js"></script>
@@ -48,7 +34,8 @@
 <script src="js/collections/PlanetCollection.js"></script>
 
 <!-- Views -->
-<script src="js/views/Index.js"></script>
+<script src="js/views/Layout.js"></script>
+<script src="js/views/Loading.js"></script>
 
 <script src="js/bootstrap.js"></script>
 
