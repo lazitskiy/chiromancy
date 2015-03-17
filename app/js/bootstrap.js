@@ -52,6 +52,14 @@
         App.start();
         var main_layout = new App.View.Layout();
         App.layout.show(main_layout);
+
+
+        Http.getFilm().then(function (body) {
+            console.log(JSON.parse(body));
+        }).fail(function (error) {
+            console.log("error occured: " + error);
+        });
+
     }
 
 
@@ -62,7 +70,6 @@
             error(err);
             console.error(err);
         });
-    ;
 
-  //  App.start();
+
 })(App);

@@ -10,6 +10,7 @@ var
     fs = require('fs'),
     gui = require('nw.gui'),
     i18n = require('i18n'),
+    http = require('http'),
 
     win = gui.Window.get(),
 
